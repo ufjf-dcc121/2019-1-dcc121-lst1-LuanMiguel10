@@ -10,7 +10,11 @@
     <h1 id = "nomecompleto"></h1>
 
     <script>
-        
+        var nome = document.getElementById('nome');
+        var sobrenome = document.getElementById('sobrenome');
+        var nomeCompleto = document.getElementById('nomecompleto');
+
+        nomeCompleto.textContent = 'Bem vindo ' + nome.textContent + ' ' + sobrenome.textContent + '!';
     </script>
 </body>
 </html>
