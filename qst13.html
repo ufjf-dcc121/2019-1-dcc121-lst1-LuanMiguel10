@@ -8,7 +8,12 @@
     <div id = "interativo">Clique-me!</div>
 
     <script>
-    
+        var interativo = document.getElementById('interativo');
+        interativo.addEventListener("click", intera);
+
+        function intera() {
+            interativo.textContent = 'Funcionou!';
+        }
     </script>
 </body>
 </html>
