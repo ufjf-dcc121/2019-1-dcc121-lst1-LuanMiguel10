@@ -15,7 +15,7 @@
         </p>
 
         <p id = "resultado"></p>
-        <button id = "avaiar">Avaliar</button>
+        <button id = "avaliar">Avaliar</button>
         <button id = "limpar">Limpar</button>
 
         <p id = "melhorias"></p>
@@ -36,14 +36,25 @@
         nome.contentEditable = true;
         anos.contentEditable = true;
         confeitaria.contentEditable = true;
-        cobertura.contentEditable = true;
+        coberturas.contentEditable = true;
         bolos.contentEditable = true;
 
         botaoLimpar.addEventListener("click", limparClick);
+        botaoAvaliar.addEventListener("click", avaliarClick);
 
         function limparClick() {
             resultado.textContent = "";
             melhorias.textContent = "";
+        }
+
+        function avaliarClick() {
+            media = (parseFloat(confeitaria.textContent)+parseFloat(coberturas.textContent)+parseFloat(bolos.textContent)) / 3;
+            if (media >= 70){
+                resultado.textContent = "Parabéns " + nome.textContent + "! " + "Você está aprovado com média " + media + "!";
+            }
+            else{
+                resultado.textContent = "Você está reprovado com média " + media + "!";
+            }
         }
     </script>
 </body>
