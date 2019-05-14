@@ -8,7 +8,7 @@
     <main>
         <h1>Resultado da Avaliação</h1>
         <p>
-            Olá <span id = "nome"> Fulano </span>, você está matriculado há <span id = "anos">2</span> anos
+            Olá <span id = "nome">Fulano</span>, você está matriculado há <span id = "anos">2</span> anos
             no curso de Confeitaria e as notas das suas disciplinas são: <span id = "confeitaria">70</span>
             em Confeitaria Básica; <span id = "coberturas">80</span> em Coberturas e 
             <span id = "bolos">60</span> em Broas e Bolos.
@@ -54,6 +54,16 @@
             }
             else{
                 resultado.textContent = "Você está reprovado com média " + media + "!";
+            }
+
+            if (parseFloat(confeitaria.textContent) < 60){
+                melhorias.innerHTML = nome.textContent + ", considere estudar mais Confeitaria!" + '<br/>';
+            }
+            if (parseFloat(coberturas.textContent) < 60){
+                melhorias.innerHTML = melhorias.innerHTML + nome.textContent + ", considere estudar mais Coberturas!" + '<br/>';
+            }
+            if (parseFloat(bolos.textContent) < 60){
+                melhorias.innerHTML = melhorias.innerHTML + nome.textContent + ", considere estudar mais Bolos!";
             }
         }
     </script>
